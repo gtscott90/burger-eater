@@ -49,7 +49,7 @@ if (createBurgerBtn) {
         devoured: false,
       };
       // Send POST request to create a new quote
-      fetch('/api/burgerss', {
+      fetch('/api/burgers', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
