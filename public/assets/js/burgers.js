@@ -60,7 +60,7 @@ if (createBurgerBtn) {
         document.getElementById('bgr').value = '';
 
          // Reload the page so the user can see the new quote
-         console.log('Created a new cat!');
+         console.log('Created a new Burger!');
          location.reload();
        });
      });
