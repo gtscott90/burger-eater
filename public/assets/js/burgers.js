@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 // Grab the buttons by class to change their eaten status
-const changeEatenBtns = deocument.querySelectorAll('.change-eaten');
+const changeEatenBtns = document.querySelectorAll('.change-devoured');
 
 if(changeEatenBtns) {
     changeEatenBtns.forEach((button) => {
