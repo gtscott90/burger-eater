@@ -43,5 +43,25 @@ if (createBurgerBtn) {
       // Grabs the value of the textarea that goes by the name, "quote"
       const newBurger = {
         name: document.getElementById('bgr').value.trim(),
-        devoured: false
+        devoured: false,
       };
+      // Send POST request to create a new quote
+      fetch('/api/burgerss', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+
+        // make sure to serialize the JSON body
+        body: JSON.stringify(newBurger),
+      }).then(() => {
+        // Empty the form
+        document.getElementById('bgr').value = '';
+
+         // Reload the page so the user can see the new quote
+         console.log('Created a new cat!');
+         location.reload();
+       });
+     });
+   }
