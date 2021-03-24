@@ -1,4 +1,7 @@
-
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (event) {
+      console.info('DOM loaded');
+    }
 
 
 // Grab the buttons by class to change their eaten status
@@ -65,3 +68,5 @@ if (createBurgerBtn) {
        });
      });
    }
+});
+
