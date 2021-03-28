@@ -78,7 +78,6 @@ const orm = {
           if (err) {
             throw err;
           }
-    
           cb(result);
         });
       },
@@ -86,12 +85,10 @@ const orm = {
         let queryString = `DELETE FROM ${table}`;
         queryString += ' WHERE ';
         queryString += condition;
-    
         connection.query(queryString, (err, result) => {
           if (err) {
             throw err;
           }
-    
           cb(result);
         });
       },
