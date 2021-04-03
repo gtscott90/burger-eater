@@ -1,6 +1,10 @@
 // Set up connection to SQL
 const mysql = require('mysql');
 require('dotenv').config();
+
+if (process.env.JAWSDB_URL) {
+  const connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
 const connection = mysql.createConnection({
   host: 'localhost',
   port: 3306,
@@ -8,7 +12,7 @@ const connection = mysql.createConnection({
   password: process.env.PASS,
   database: 'burger_db',
 });
-
+}
 // connect to SQL
 connection.connect((err) => {
   if (err) {
